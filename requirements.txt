@@ -1,0 +1,6 @@
+pandas
+numpy
+yfinance
+alpha_vantage
+statsmodels
+plotly
