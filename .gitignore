@@ -1,14 +1,7 @@
-# Mac system files
-.DS_Store
-
-# Python cache
-__pycache__/
-*.pyc
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints/
-
-# Virtual environment
-venv/
-
 .env
+.DS_Store
+__pycache__/
+.ipynb_checkpoints/
+data/decisions/*.csv
+data/prices/*.csv
+*.sqlite
