@@ -15,5 +15,5 @@ data/user_categories/**
 !data/static/**
 !data/profiles/**
 
-# other data files
+# other data files (personal custum package)
 data/profiles/custom.yaml
