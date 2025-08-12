@@ -1,0 +1,12 @@
+name: Income
+description: Favor income and fees while keeping risk reasonable
+timeframe: 3y
+returns_frequency: daily
+r2_align_target: high
+weights:
+  vol: 0.15
+  max_dd: 0.15
+  sharpe: 0.20
+  expense_ratio: 0.20
+  yield: 0.25
+  r2_align: 0.05

@@ -1,0 +1,12 @@
+name: Low Volatility
+description: Prioritize smooth ride and shallow drawdowns
+timeframe: 3y
+returns_frequency: daily
+r2_align_target: high
+weights:
+  vol: 0.30
+  max_dd: 0.25
+  sharpe: 0.25
+  expense_ratio: 0.10
+  yield: 0.05
+  r2_align: 0.05

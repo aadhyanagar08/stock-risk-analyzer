@@ -1,0 +1,12 @@
+name: Balanced
+description: Even mix of stability, efficiency, and risk-adjusted return
+timeframe: 3y
+returns_frequency: daily
+r2_align_target: high
+weights:
+  vol: 0.20
+  max_dd: 0.20
+  sharpe: 0.30
+  expense_ratio: 0.15
+  yield: 0.10
+  r2_align: 0.05
