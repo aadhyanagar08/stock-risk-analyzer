@@ -1,14 +1,19 @@
+# configurations
 .env
 .DS_Store
+
+# noise files
 __pycache__/
 .ipynb_checkpoints/
-data/decisions/*.csv
-data/prices/*.csv
-*.sqlite
-.conda/
-conda-meta/
-bin/
-lib/
-include/
-venv/
-.python-version
+
+# Python bytecode
+data/cache/**
+data/decisions/**
+data/user_categories/**
+
+# data directories
+!data/static/**
+!data/profiles/**
+
+# other data files
+data/profiles/custom.yaml
