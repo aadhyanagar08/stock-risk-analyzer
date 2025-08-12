@@ -5,3 +5,10 @@ __pycache__/
 data/decisions/*.csv
 data/prices/*.csv
 *.sqlite
+.conda/
+conda-meta/
+bin/
+lib/
+include/
+venv/
+.python-version
