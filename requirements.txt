@@ -7,3 +7,4 @@ statsmodels
 scipy
 pydantic 
 python-dotenv
+tabulate

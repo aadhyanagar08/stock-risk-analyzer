@@ -43,3 +43,34 @@ Data readiness (later combined with factors)
 If a ticker’s aligned history < threshold after intersection, mark insufficient_history
 
 """
+from typing import Dict, Iterable, List
+
+def validate_tickers(tickers: Iterable[str]) -> List[str]:
+    out=[]
+    for t in tickers:
+        if not isinstance (t, str):
+            continue
+        t2= t.strip().upper()
+        if 1<= len(t2)<=10 and all (c.isalum() or c in ".-" for c in t2):
+            out.append(t2)
+    if len(out)< 1:
+        raise ValueError("At least one valid ticker is required")
+    return out
+def normalise_weights(weights: Dict[str, float]) -> Dict[str,float]:
+    #keeping only known metrics coerce negatives to 0
+    w= {k: max(0.0, float(v)) for k, v in weights.items() if k in ALLOWED_METRIC}
+    total = sum(w.values())
+    if total == 0:
+        raise ValueError("At least one weight must be non-zero")
+    return {k: v / total for k, v in w.items()}
+def validate_timeframe(timeframe: str) -> str:
+    allowed = {"1y", "3y", "5y"}
+    tf2 = timeframe.strip().lower()
+    if tf2 not in allowed:
+        raise ValueError(f"Invalid timeframe: {timeframe}. Allowed: {allowed}")
+    return tf2
+def validate_frequency(frequency: str) -> str:
+    allowed = {"D", "W", "M"}
+    if frequency not in allowed:
+        raise ValueError(f"Invalid frequency: {frequency}. Allowed: {allowed}")
+    return frequency
