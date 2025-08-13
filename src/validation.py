@@ -44,6 +44,7 @@ If a ticker’s aligned history < threshold after intersection, mark insufficien
 
 """
 from typing import Dict, Iterable, List
+ALLOWED_METRIC =["vol","max_dd", "sharpe", "expense_ratio", "yield", "r2_align"]
 
 def validate_tickers(tickers: Iterable[str]) -> List[str]:
     out=[]
